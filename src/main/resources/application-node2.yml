@@ -1,0 +1,15 @@
+spring:
+  application:
+    name:eureka-server
+
+server:
+  port: 1112
+
+eureka:
+  instance:
+    hostname:node2
+  client:
+    registerWithEureka: false  # Eureka Server同时也是Client，但没必要注册和获取注册信息
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://node1:1111/eureka/
